@@ -11,7 +11,6 @@ project showcases how to create a live-updating web interface for monitoring foo
 - Clean and minimal UI design
 - Built with .NET 10.0
 - Dependency injection using Injectio
-- Simple and efficient architecture
 
 ## Technology Stack
 
@@ -25,3 +24,7 @@ project showcases how to create a live-updating web interface for monitoring foo
 1. Clone the repository
 2. Ensure you have .NET 10.0 SDK installed
 3. Run the following commands:
+
+```bash
+dotnet run
+```
