@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        flex-wrap: wrap;
+        width: 90%;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    li {
+        font-size: 2rem;
+    }
+</style>
+<body>
+
+<h1>Khalid's Fast-Food Fair</h1>
+<ul id="orders">
+</ul>
+
+<script>
+    const eventSource = new EventSource('/orders');
+    const angelsList = document.getElementById('orders');
+
+    eventSource.addEventListener('order', event => {
+        const li = document.createElement('li');
+        li.textContent = event.data;
+        angelsList.appendChild(li);
+    });
+
+    eventSource.onerror = error => {
+        console.error('EventSource failed:', error);
+        eventSource.close();
+    };
+</script>
+
+</body>
+</html>
