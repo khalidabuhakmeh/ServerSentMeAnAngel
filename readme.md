@@ -3,6 +3,8 @@
 A real-time food order tracking application demonstrating Server-Sent Events (SSE) implementation using .NET. This
 project showcases how to create a live-updating web interface for monitoring food orders in a fast-food setting.
 
+![Screenshot](screenshot.png)
+
 ## Features
 
 - Real-time order updates using Server-Sent Events
